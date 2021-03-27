@@ -1,0 +1,4 @@
+# Project exclude paths
+/.gradle/
+/quadrapassel-application/build/
+/quadrapassel-application/build/classes/java/main/

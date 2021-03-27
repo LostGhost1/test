@@ -1,0 +1,23 @@
+plugins {
+    id 'application'
+    id 'com.dua3.javafxgradle7plugin' version '0.0.9'
+    id 'org.beryx.jlink' version '2.23.5'
+}
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version = "16"
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+mainClassName = "org.openjfx.MainApp"
+
+jlink {
+    options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
+    launcher {
+        name = 'quadrapassel-application'
+    }
+}
